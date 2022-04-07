@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>character</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="characterslist">back</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="center-card">
+      <ion-card>
+        <img [src]="character.image" />
+  
+        <ion-card-header>
+          <ion-card-title>{{character.name}}</ion-card-title>
+        </ion-card-header>
+  
+        <ion-card-content>
+          <ion-card-subtitle>Gender: {{character.gender}}</ion-card-subtitle>
+          <ion-card-subtitle>Status: {{character.status}}</ion-card-subtitle>
+          <ion-card-subtitle>Species: {{character.species}}</ion-card-subtitle>
+          <ion-card-subtitle>Origin: {{origin}}</ion-card-subtitle>
+          <ion-card-subtitle>Location: {{location}}</ion-card-subtitle>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

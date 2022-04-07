@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> characters </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home">back</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-button expand="block" color="primary" (click)="changePageSub()">
+        <
+      </ion-button>
+      <ion-button slot="end" expand="block" color="primary" (click)="changePagePlus()">
+        >
+      </ion-button>
+    </ion-item>
+    <ion-item *ngFor="let character of characters" [routerLink]="['/character/'+ character.id]">
+      
+      <ion-avatar slot="start">
+        <ion-img [src]="character.image"></ion-img>
+      </ion-avatar>
+      <ion-label>{{character.name}}</ion-label>
+
+      
+    </ion-item>
+  </ion-list> 
+</ion-content>
